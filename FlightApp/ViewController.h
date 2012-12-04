@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+   
+    
+}
+@property (strong, nonatomic) IBOutlet UITableView *formTableView;
+@property (strong, nonatomic) IBOutlet UIButton *submitButton;
+@property (strong, nonatomic) IBOutlet UITableView *displayTableView;
+
+-(IBAction)buttonPressed:(id)sender;
 
 @end

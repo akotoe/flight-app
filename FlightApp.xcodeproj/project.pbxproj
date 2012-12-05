@@ -18,6 +18,10 @@
 		1899597A166C1F9C00A14B85 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18995979166C1F9C00A14B85 /* Default-568h@2x.png */; };
 		1899597D166C1F9C00A14B85 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1899597B166C1F9C00A14B85 /* MainStoryboard.storyboard */; };
 		18995980166C1F9C00A14B85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1899597F166C1F9C00A14B85 /* ViewController.m */; };
+		18FD0D71166F21C900095C27 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FD0D70166F21C900095C27 /* CFNetwork.framework */; };
+		18FD0D74166F21E100095C27 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FD0D73166F21E100095C27 /* SystemConfiguration.framework */; };
+		18FD0D76166F21EB00095C27 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FD0D75166F21EB00095C27 /* MobileCoreServices.framework */; };
+		18FD0D78166F223500095C27 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FD0D77166F223500095C27 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		1899597C166C1F9C00A14B85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1899597E166C1F9C00A14B85 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1899597F166C1F9C00A14B85 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18FD0D70166F21C900095C27 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		18FD0D73166F21E100095C27 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		18FD0D75166F21EB00095C27 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		18FD0D77166F223500095C27 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		18FD0D79166F25A400095C27 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +53,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FD0D78166F223500095C27 /* libz.dylib in Frameworks */,
+				18995968166C1F9B00A14B85 /* CoreGraphics.framework in Frameworks */,
+				18FD0D76166F21EB00095C27 /* MobileCoreServices.framework in Frameworks */,
+				18FD0D74166F21E100095C27 /* SystemConfiguration.framework in Frameworks */,
+				18FD0D71166F21C900095C27 /* CFNetwork.framework in Frameworks */,
 				18995964166C1F9B00A14B85 /* UIKit.framework in Frameworks */,
 				18995966166C1F9B00A14B85 /* Foundation.framework in Frameworks */,
-				18995968166C1F9B00A14B85 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,11 @@
 		18995954166C1F9B00A14B85 = {
 			isa = PBXGroup;
 			children = (
+				18FD0D79166F25A400095C27 /* libz.1.2.5.dylib */,
+				18FD0D77166F223500095C27 /* libz.dylib */,
+				18FD0D75166F21EB00095C27 /* MobileCoreServices.framework */,
+				18FD0D73166F21E100095C27 /* SystemConfiguration.framework */,
+				18FD0D70166F21C900095C27 /* CFNetwork.framework */,
 				18995969166C1F9B00A14B85 /* FlightApp */,
 				18995962166C1F9B00A14B85 /* Frameworks */,
 				18995960166C1F9B00A14B85 /* Products */,

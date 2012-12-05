@@ -9,6 +9,9 @@
 
 
 #import "ViewController.h"
+#import "ASIHTTPRequest.h"
+#import "MapViewController.h"
+#import "AppDelegate.h"
 
 
 @interface ViewController ()
@@ -21,16 +24,19 @@
 
 
 -(IBAction)buttonPressed:(id)sender{
-    
-    NSString *alertViewText = [[NSString alloc] initWithFormat:@"Process JSON object"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-    
-    
+//    
+//    NSString *alertViewText = [[NSString alloc] initWithFormat:@"Process JSON object"];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
     
     
     
-    [alert show];
     
+//    
+//    [alert show];
+    
+}
+
+- (IBAction)grabURLInTheBackground:(id)sender {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -125,6 +131,53 @@ return cell;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)grabURLInBackground:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://flight-prediction.herokuapp.com/predictions/DL123"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
+    // Use when fetching text data
+NSString *responseString = [request responseString];
+    NSString *alertViewText = [[NSString alloc] initWithFormat:responseString];
+   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];    
+    [alert show];
+    
+    
+    // Use when fetching binary data
+//    NSData *responseData = [request responseData];
+//    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+//    
+//    [self.navigationController pushViewController:mapViewController animated:YES];
+//
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    NSString *del =@"Hello";
+    
+    MapViewController *mpc = [[MapViewController alloc] initWithNibName:@"Map View" bundle:nil];
+    
+    appDelegate.arrivalDelay = del;
+    
+//     [self.navigationController pushViewController:mpc animated:YES];
+    
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
+//    NSError *error = [request error];
+    
+    NSString *alertViewText = [[NSString alloc] initWithFormat:@"Error"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    
+    [alert show];
+}
+
 
 
 

@@ -22,6 +22,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *departureDateText;
 @property (strong, nonatomic) IBOutlet UITextField *destinationAirportText;
 
+
 -(IBAction)buttonPressed:(id)sender;
+
 
 @end

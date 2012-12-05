@@ -254,9 +254,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sZh-2g-fay" secondAttribute="trailing" constant="42" id="0KW-4S-XLc"/>
                                     <constraint firstItem="iLA-JE-mkH" firstAttribute="baseline" secondItem="sZh-2g-fay" secondAttribute="baseline" type="default" id="D6u-Q0-0nG"/>
                                     <constraint firstItem="Zwh-lS-pqO" firstAttribute="top" secondItem="XgN-nv-KQg" secondAttribute="top" constant="10" id="EEw-QS-rad"/>
-                                    <constraint firstAttribute="trailing" secondItem="sZh-2g-fay" secondAttribute="trailing" constant="52" id="IcG-hv-Ws4"/>
                                     <constraint firstItem="C9V-Lf-RpI" firstAttribute="baseline" secondItem="Zwh-lS-pqO" secondAttribute="baseline" type="default" id="Ily-xp-xws"/>
                                     <constraint firstItem="iLA-JE-mkH" firstAttribute="baseline" secondItem="C9V-Lf-RpI" secondAttribute="baseline" type="default" id="LEz-RK-pbC"/>
                                     <constraint firstAttribute="trailing" secondItem="iLA-JE-mkH" secondAttribute="trailing" constant="179" id="dJS-c7-dbQ"/>
@@ -358,7 +358,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="airlineText" destination="5UQ-xA-EzB" id="BGj-Iw-1aE"/>
+                        <outlet property="departureAirportText" destination="ykf-dD-qyd" id="vZ8-8f-pga"/>
+                        <outlet property="departureDateText" destination="Xom-tR-LDU" id="AWK-r5-RDa"/>
+                        <outlet property="departureText" destination="ykf-dD-qyd" id="YQe-to-5VN"/>
+                        <outlet property="destinationAirportText" destination="iKn-rx-Gr0" id="qAR-6U-DcE"/>
                         <outlet property="displayTableView" destination="Rdq-yL-5rC" id="J4r-Sx-FfZ"/>
+                        <outlet property="flightNumberText" destination="E7Y-YR-uhA" id="NuC-Y9-7uy"/>
+                        <outlet property="listTableView" destination="Rdq-yL-5rC" id="lD5-kL-0Ry"/>
                         <outlet property="searchDisplayController" destination="aaZ-91-9Wj" id="23e-6i-lvR"/>
                         <outlet property="submitButton" destination="rqd-YI-HTo" id="Ynf-ZI-2bA"/>
                     </connections>
@@ -387,7 +394,6 @@
                 <relationship kind="outlet" name="displayTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="formTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="listTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="processButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
             </relationships>
         </class>

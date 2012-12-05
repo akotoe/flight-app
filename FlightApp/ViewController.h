@@ -12,9 +12,10 @@
    
     
 }
-@property (strong, nonatomic) IBOutlet UITableView *formTableView;
+
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
-@property (strong, nonatomic) IBOutlet UITableView *displayTableView;
+
+@property (strong, nonatomic) IBOutlet UITableView *listTableView;
 
 -(IBAction)buttonPressed:(id)sender;
 

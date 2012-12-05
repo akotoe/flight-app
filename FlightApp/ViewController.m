@@ -36,9 +36,9 @@
     
     if(tableView == self.listTableView){
         
-        return 20;
+        return 1;
     }else{
-        return 15;
+        return 2;
     }
     
 }
@@ -53,7 +53,7 @@
     
     if (cell==nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
+       
     }
     
     
@@ -66,16 +66,24 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
         
         if ([indexPath section] == 0) {
-            UILabel *departureLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 5, 100, 30)];
-            UILabel *destinationLabel = [[UILabel alloc] initWithFrame:CGRectMake(250, 5, 100, 30)];
-            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(450, 5, 100, 30)];
+            UILabel *departureLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 5, 150, 30)];
+            UILabel *destinationLabel = [[UILabel alloc] initWithFrame:CGRectMake(250, 5, 150, 30)];
+            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(450, 5, 150, 30)];
+            UILabel *statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(600, 5, 150, 30)];
             //
             
             if([indexPath row] == 0){
-                departureLabel.text = @"Airline";
-                destinationLabel.text = @"Airline";
-                numberLabel.text = @"Airline";
-                 numberLabel.text = @"Airline";
+                departureLabel.text = @"SFO";
+                [departureLabel setBackgroundColor:[UIColor clearColor]];
+                
+                destinationLabel.text = @"KQ";
+                [destinationLabel setBackgroundColor:[UIColor clearColor]];
+                
+                numberLabel.text = @"FX150";
+                [numberLabel setBackgroundColor:[UIColor clearColor]];
+              
+                statusLabel.text = @"Delayed 5 mins ";
+                [statusLabel setBackgroundColor:[UIColor clearColor]];
                 
             }
             
@@ -83,6 +91,8 @@
             [cell addSubview:departureLabel];
             [cell addSubview:destinationLabel];
             [cell addSubview:numberLabel];
+            [cell addSubview:statusLabel];
+            
           
 
             

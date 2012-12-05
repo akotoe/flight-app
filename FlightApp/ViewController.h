@@ -9,13 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
-   
+    
     
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
 @property (strong, nonatomic) IBOutlet UITableView *listTableView;
+@property (strong, nonatomic) IBOutlet UITextField *airlineText;
+@property (strong, nonatomic) IBOutlet UITextField *flightNumberText;
+@property (strong, nonatomic) IBOutlet UITextField *departureAirportText;
+@property (strong, nonatomic) IBOutlet UITextField *departureDateText;
+@property (strong, nonatomic) IBOutlet UITextField *destinationAirportText;
 
 -(IBAction)buttonPressed:(id)sender;
 

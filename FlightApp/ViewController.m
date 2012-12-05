@@ -16,7 +16,7 @@
 
 @implementation ViewController
 
-@synthesize listTableView, submitButton;
+@synthesize listTableView, submitButton, airlineText, departureAirportText, departureDateText, destinationAirportText;
 
 
 -(IBAction)buttonPressed:(id)sender{

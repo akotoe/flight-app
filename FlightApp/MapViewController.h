@@ -9,10 +9,14 @@
 #import "ViewController.h"
 
 @interface MapViewController : ViewController{
+ 
     
 }
 
-@property (retain, nonatomic) IBOutlet UILabel *arrivalDelay;
 
+
+@property (retain, readwrite) IBOutlet UILabel *arrivalDelay;
+@property (strong, nonatomic) IBOutlet UILabel *departurePrediction;
+@property (strong, nonatomic) IBOutlet UILabel *destinationPrediction;
 
 @end

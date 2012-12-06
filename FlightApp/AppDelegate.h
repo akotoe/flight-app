@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    NSString *arrivalDelay;
+    UILabel *arrivalDelay;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (copy, readwrite) NSString *arrivalDelay;
+@property (copy, readwrite) UILabel *arrivalDelay;
 
 @end

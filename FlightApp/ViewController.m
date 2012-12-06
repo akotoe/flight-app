@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 
 
+
 @interface ViewController ()
 
 @end
@@ -24,6 +25,8 @@
 
 
 -(IBAction)buttonPressed:(id)sender{
+    
+    
 //    
 //    NSString *alertViewText = [[NSString alloc] initWithFormat:@"Process JSON object"];
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
@@ -134,6 +137,9 @@ return cell;
 
 - (IBAction)grabURLInBackground:(id)sender
 {
+    
+    
+    
     NSURL *url = [NSURL URLWithString:@"http://flight-prediction.herokuapp.com/predictions/DL123"];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setDelegate:self];
@@ -144,25 +150,38 @@ return cell;
 {
     // Use when fetching text data
 NSString *responseString = [request responseString];
-    NSString *alertViewText = [[NSString alloc] initWithFormat:responseString];
-   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];    
-    [alert show];
+    
+    NSString *result = @" Response for ";
+    result = [result stringByAppendingString:self.departureAirportText.text];
+    
+    result = [result stringByAppendingString:@" to "];
+    
+    result = [result stringByAppendingString:self.destinationAirportText.text];
+    
+    
+    responseString = [result stringByAppendingString:responseString];
+//    
+//    NSString *alertViewText = [[NSString alloc] initWithFormat:responseString];
+//   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:alertViewText delegate:(nil) cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];    
+//    [alert show];
     
     
     // Use when fetching binary data
 //    NSData *responseData = [request responseData];
-//    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
-//    
-//    [self.navigationController pushViewController:mapViewController animated:YES];
+    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+//
+    mapViewController.destinationPrediction.text = @"Heloo";
+    
+  [self.navigationController pushViewController:mapViewController animated:YES];
 //
     
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    NSString *del =@"Hello";
+//    NSString *del =responseString;
     
-    MapViewController *mpc = [[MapViewController alloc] initWithNibName:@"Map View" bundle:nil];
+//    MapViewController *mpc = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     
-    appDelegate.arrivalDelay = del;
+//    appDelegate.arrivalDelay.text = @"Delay infor";
     
 //     [self.navigationController pushViewController:mpc animated:YES];
     

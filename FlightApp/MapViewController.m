@@ -14,7 +14,8 @@
 @end
 
 @implementation MapViewController
-@synthesize arrivalDelay;
+
+@synthesize arrivalDelay, departurePrediction,destinationPrediction;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,9 +31,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-  AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    
+//    self.arrivalDelay.text = appDelegate.arrivalDelay.text;
+   self.destinationPrediction.text = @"Modiefied";
+    
    
-[arrivalDelay setText:@"Hello"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,8 +46,8 @@
 }
 
 - (void)dealloc {
-    [arrivalDelay release];
-    [arrivalDelay release];
+    
+    
     [super dealloc];
 }
 @end

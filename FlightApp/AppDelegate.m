@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+
 @synthesize arrivalDelay;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
